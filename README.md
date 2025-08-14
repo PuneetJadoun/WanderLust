@@ -1,4 +1,4 @@
-# StayNest 🏠
+#  WanderLust 🏠
 
 A practice **Airbnb clone** built to explore **full-stack web development** concepts such as booking, hosting, and user authentication.
 
