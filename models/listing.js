@@ -1,19 +1,21 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
 const listingSchema = new Schema({
     title:{
         type: String,
         required: true,
     },
-    descrption:String,
-    image:{
-        type: String,
-        default:"https://images.unsplash.com/photo-1610106109549-5813ab87ae88?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        set: (v) => v === ""? 
-        "https://images.unsplash.com/photo-1610106109549-5813ab87ae88?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        : v,
+    description:String,
+    image: {
+        filename: {
+            type: String,
+            default: "listingimage"
+        },
+        url:{
+            type: String,
+            default: "https://images.unsplash.com/photo-1610106109549-5813ab87ae88?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0"
+        }
     },
     price:String,
     location:String,
